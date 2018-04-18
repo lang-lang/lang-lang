@@ -1,28 +1,36 @@
 <html ng-app="ns7llApp">
 <head>
-	<meta charset="utf-8"/>
-	<title>lang-logos</title>
-	<!-- Latest compiled and minified CSS -->
-	<!-- Optional theme -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-					integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-					crossorigin="anonymous"></script>
-	<!-- angular js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-	<script
-				src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
-	<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
-	<!-- font awesome -->
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://unpkg.com/ng-table/bundles/ng-table.min.css">
+  <meta charset="utf-8"/>
+  <title>lang-logos</title>
 
-	<script>
-    (function() {
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-      const ns7llApp = angular.module('ns7llApp', ['ngSanitize', 'ngTable']);
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+          integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+          integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+          crossorigin="anonymous"></script>
+
+  <!-- angular js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+
+  <!-- local styles and scripts -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <script>
+    (function () {
+
+      const ns7llApp = angular.module('ns7llApp', ['ngSanitize']);
       ns7llApp.directive("ngBindHtmlCompile", function ($compile, $sce) {
         return {
           restrict: "A",
@@ -37,9 +45,7 @@
         };
       });
 
-
-      ns7llApp.controller('ns7llCtrl', function ($scope, $http, NgTableParams) {
-        $scope.tableParams = new NgTableParams();
+      ns7llApp.controller('ns7llCtrl', function ($scope, $http) {
         $http.get('lang-logos.json')
         .then(function (r) {
           $scope._ = r.data;
@@ -48,27 +54,32 @@
       })
 
     })();
-	</script>
+  </script>
 </head>
 <body>
 <div ng-controller="ns7llCtrl" class="ns7ll container">
-	<DIV>
-		<table>
-			<tr>
-				<th>Lang</th>
-				<th>Logo</th>
-			</tr>
-			<tr ng-repeat="row in _.langLogos">
-				<td>{{row.lang}}</td>
-				<td><img ng-src="{{row.logo}}" width="48"/></td>
-			</tr>
-		</table>
-	</DIV>
+  <h1 class="display-3 mt-5 border-bottom"><samp>lang-logos</samp></h1>
+  <div class="mb-5">
+    An incomplete list of programming languages and their most recognized or official logos
+    <br/>
+    Compiled by <a href="http://nafsadh.com">nafSadh</a> on <a href="https://github.com/nafSadh/lang-logos">github</a>
+
+  </div>
+  <table class="table">
+    <tr>
+      <th>Lang</th>
+      <th>Logo</th>
+    </tr>
+    <tr ng-repeat="row in _.langLogos">
+      <td>{{row.lang}}</td>
+      <td><img ng-src="{{row.logo}}" width="48"/></td>
+    </tr>
+  </table>
 </div>
 <script>
-	$(function () {
-	  console.log('Doc Init');
-	})
+  $(function () {
+    console.log('Doc Init');
+  })
 </script>
 </body>
 </html>
