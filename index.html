@@ -1,0 +1,74 @@
+<html ng-app="ns7llApp">
+<head>
+	<meta charset="utf-8"/>
+	<title>lang-logos</title>
+	<!-- Latest compiled and minified CSS -->
+	<!-- Optional theme -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+					integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+					crossorigin="anonymous"></script>
+	<!-- angular js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script
+				src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+	<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+	<!-- font awesome -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/ng-table/bundles/ng-table.min.css">
+
+	<script>
+    (function() {
+
+      const ns7llApp = angular.module('ns7llApp', ['ngSanitize', 'ngTable']);
+      ns7llApp.directive("ngBindHtmlCompile", function ($compile, $sce) {
+        return {
+          restrict: "A",
+          link: function (scope, element, attrs) {
+            scope.$watch(attrs.ngBindHtmlCompile, function (html) {
+              let el = angular.element("<span>").html(html);
+              element.empty();
+              element.append(el);
+              $compile(element.contents())(scope);
+            })
+          }
+        };
+      });
+
+
+      ns7llApp.controller('ns7llCtrl', function ($scope, $http, NgTableParams) {
+        $scope.tableParams = new NgTableParams();
+        $http.get('lang-logos.json')
+        .then(function (r) {
+          $scope._ = r.data;
+          console.log(r.data);
+        });
+      })
+
+    })();
+	</script>
+</head>
+<body>
+<div ng-controller="ns7llCtrl" class="ns7ll container">
+	<DIV>
+		<table>
+			<tr>
+				<th>Lang</th>
+				<th>Logo</th>
+			</tr>
+			<tr ng-repeat="row in _.langLogos">
+				<td>{{row.lang}}</td>
+				<td><img ng-src="{{row.logo}}" width="48"/></td>
+			</tr>
+		</table>
+	</DIV>
+</div>
+<script>
+	$(function () {
+	  console.log('Doc Init');
+	})
+</script>
+</body>
+</html>
