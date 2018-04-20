@@ -10,7 +10,9 @@
     },
     {
       "lang": "C#",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/464px-C_Sharp_wordmark.svg.png"
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/464px-C_Sharp_wordmark.svg.png",
+      "wiki":"C_Sharp_(programming_language)",
+      "desc": "General purpose, object oriented"
     },
     {
       "lang": "Go",

@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -71,26 +74,33 @@
 
   </div>
   <div class="row logo-cards" >
-    <div class="card m-3" style="width: 15rem;" ng-repeat="ll in _.langLogos">
+    <div class="card m-2" style="width: 16rem;" ng-repeat="ll in _.langLogos">
+      <div class="card-header">
+        <h5 class="card-title">{{ll.lang}}</h5>
+      </div>
       <div class="card-body text-center">
         <img class="" ng-src="{{ll.logo}}" style="max-height: 6rem">
       </div>
-      <div class="card-footer">
-        <h5 class="card-title">{{ll.lang}}</h5>
-        <a ng-href="{{ll.logo}}">image</a>
-        <a ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">repos in github</a>
+      <div class="card-body pb-0">
+        <p class="card-text">{{ll.desc}}</p>
+        <!--<a ng-if="ll.logo" class="btn btn-light" ng-href="{{ll.logo}}"><i class="fas fa-link"></i></a>-->
+      </div>
+      <div class="card-footer bg-transparent border-white">
+        <hr/>
+        <a class="btn btn-light"  target="_blank"
+           ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="btn btn-light" target="_blank" ng-hide="ll.wiki"
+           ng-href="https://en.wikipedia.org/wiki/{{ll.lang|urlEncode}}">
+          <i class="fab fa-wikipedia-w"></i>
+        </a>
+        <a class="btn btn-light" target="_blank" ng-if="ll.wiki"
+           ng-href="https://en.wikipedia.org/wiki/{{ll.wiki|urlEncode}}">
+          <i class="fab fa-wikipedia-w"></i>
+        </a>
       </div>
     </div>
-    <table class="table">
-      <tr>
-        <th>Lang</th>
-        <th>Logo</th>
-      </tr>
-      <tr ng-repeat="row in _.langLogos">
-        <td>{{row.lang}}</td>
-        <td><img ng-src="{{row.logo}}" width="48"/></td>
-      </tr>
-    </table>
   </div>
 </div>
   <script>
