@@ -22,6 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+  <script src="ui-bootstrap-3.0.3.min.js"></script>
 
   <!-- local styles and scripts -->
   <link rel="stylesheet" href="style.css">
@@ -30,7 +31,7 @@
   <script>
     (function () {
 
-      const ns7llApp = angular.module('ns7llApp', ['ngSanitize']);
+      const ns7llApp = angular.module('ns7llApp', ['ngSanitize', 'ui.bootstrap']);
       ns7llApp.directive("ngBindHtmlCompile", function ($compile, $sce) {
         return {
           restrict: "A",
@@ -51,7 +52,11 @@
           $scope._ = r.data;
           console.log(r.data);
         });
-      })
+      });
+
+      ns7llApp.filter('urlEncode', function () {
+        return window.encodeURIComponent;
+      });
 
     })();
   </script>
@@ -65,21 +70,33 @@
     Compiled by <a href="http://nafsadh.com">nafSadh</a> on <a href="https://github.com/nafSadh/lang-logos">github</a>
 
   </div>
-  <table class="table">
-    <tr>
-      <th>Lang</th>
-      <th>Logo</th>
-    </tr>
-    <tr ng-repeat="row in _.langLogos">
-      <td>{{row.lang}}</td>
-      <td><img ng-src="{{row.logo}}" width="48"/></td>
-    </tr>
-  </table>
+  <div class="row logo-cards" >
+    <div class="card m-3" style="width: 15rem;" ng-repeat="ll in _.langLogos">
+      <div class="card-body text-center">
+        <img class="" ng-src="{{ll.logo}}" style="max-height: 6rem">
+      </div>
+      <div class="card-footer">
+        <h5 class="card-title">{{ll.lang}}</h5>
+        <a ng-href="{{ll.logo}}">image</a>
+        <a ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">repos in github</a>
+      </div>
+    </div>
+    <table class="table">
+      <tr>
+        <th>Lang</th>
+        <th>Logo</th>
+      </tr>
+      <tr ng-repeat="row in _.langLogos">
+        <td>{{row.lang}}</td>
+        <td><img ng-src="{{row.logo}}" width="48"/></td>
+      </tr>
+    </table>
+  </div>
 </div>
-<script>
-  $(function () {
-    console.log('Doc Init');
-  })
-</script>
+  <script>
+    $(function () {
+      console.log('Doc Init');
+    })
+  </script>
 </body>
 </html>
