@@ -90,23 +90,27 @@
       <div class="card-footer bg-transparent border-white">
         <hr class="mb-2"/>
         <div class="btn-group" role="group" >
-          <a class="btn btn-light" target="_blank" ng-hide="ll.wiki"
+          <a class="btn btn-light"  target="_blank" ng-if="ll.docs" title="Official Documentation"
+             ng-href="{{ll.docs}}">
+            <i class="fab fa-readme"></i>
+          </a>
+          <a class="btn btn-light" target="_blank" ng-hide="ll.wiki" title="Read on Wikipedia"
              ng-href="https://en.wikipedia.org/wiki/{{ll.lang|urlEncode}} (programming language)">
             <i class="fab fa-wikipedia-w"></i>
           </a>
-          <a class="btn btn-light" target="_blank" ng-if="ll.wiki"
+          <a class="btn btn-light" target="_blank" ng-if="ll.wiki" title="Read on Wikipedia"
              ng-href="https://en.wikipedia.org/wiki/{{ll.wiki|urlEncode}}">
             <i class="fab fa-wikipedia-w"></i>
           </a>
-          <a class="btn btn-light"  target="_blank" ng-if="ll.hl"
+          <a class="btn btn-light"  target="_blank" ng-if="ll.hl" title="Hello World! Program"
              ng-href="https://github.com/hello-lang/{{ll.hl}}">
             <i class="fas fa-terminal"></i>
           </a>
-          <a class="btn btn-light"  target="_blank"
+          <a class="btn btn-light"  target="_blank" title="Projects on Github"
              ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
             <i class="fab fa-github"></i>
           </a>
-          <a class="btn btn-light"  target="_blank"
+          <a class="btn btn-light"  target="_blank" title="Get help from StackOverflow"
              ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
             <i class="fab fa-stack-overflow"></i>
           </a>

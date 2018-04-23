@@ -60,7 +60,8 @@
     {
       "lang": "Python",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      "desc": "duck type, object oriented, procedural, reflective"
+      "desc": "duck type, object oriented, procedural, reflective",
+      "docs": "https://docs.python.org/"
     },
     {
       "lang": "",
