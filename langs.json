@@ -3,7 +3,8 @@
     {
       "lang": "C",
       "logot": "C",
-      "desc": "static type, procedural, structured"
+      "desc": "static type, procedural, structured",
+      "hl"  : "C"
     },
     {
       "lang": "C++",

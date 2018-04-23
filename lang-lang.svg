@@ -1,0 +1,13 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <polygon points="50,325 200,325 100,175" fill="#ccc"/>
+  <ellipse stroke="null" ry="150" rx="150" id="bubble_ellipse"
+    cy="175" cx="200" stroke-width="1.5" fill="#ccc"/>
+  <text text-anchor="middle" font-family="Consolas" font-size="160" font-weight="700" id="ctext"
+    y="240" x="200" fill="#07C"
+    >|?/</text>
+  <text text-anchor="middle" font-family="Consolas" font-size="56" font-weight="700" id="ctext"
+    y="385" x="190" fill="#07c">lang-lang</text>
+ </g>
+</svg>

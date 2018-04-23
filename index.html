@@ -88,19 +88,29 @@
         <p class="card-text">{{ll.desc}}</p>
       </div>
       <div class="card-footer bg-transparent border-white">
-          <hr class="mb-2"/>
+        <hr class="mb-2"/>
+        <div class="btn-group" role="group" >
           <a class="btn btn-light" target="_blank" ng-hide="ll.wiki"
-           ng-href="https://en.wikipedia.org/wiki/{{ll.lang|urlEncode}} (programming language)">
-          <i class="fab fa-wikipedia-w"></i>
-        </a>
-        <a class="btn btn-light" target="_blank" ng-if="ll.wiki"
-           ng-href="https://en.wikipedia.org/wiki/{{ll.wiki|urlEncode}}">
-          <i class="fab fa-wikipedia-w"></i>
-        </a>
-        <a class="btn btn-light"  target="_blank"
-           ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
-          <i class="fab fa-github"></i>
-        </a>
+             ng-href="https://en.wikipedia.org/wiki/{{ll.lang|urlEncode}} (programming language)">
+            <i class="fab fa-wikipedia-w"></i>
+          </a>
+          <a class="btn btn-light" target="_blank" ng-if="ll.wiki"
+             ng-href="https://en.wikipedia.org/wiki/{{ll.wiki|urlEncode}}">
+            <i class="fab fa-wikipedia-w"></i>
+          </a>
+          <a class="btn btn-light"  target="_blank" ng-if="ll.hl"
+             ng-href="https://github.com/hello-lang/{{ll.hl}}">
+            <i class="fas fa-terminal"></i>
+          </a>
+          <a class="btn btn-light"  target="_blank"
+             ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="btn btn-light"  target="_blank"
+             ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
