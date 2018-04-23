@@ -1,7 +1,7 @@
 <html ng-app="ns7llApp">
 <head>
   <meta charset="utf-8"/>
-  <title>lang-logos</title>
+  <title>lang-lang</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -50,7 +50,7 @@
       });
 
       ns7llApp.controller('ns7llCtrl', function ($scope, $http) {
-        $http.get('lang-logos.json')
+        $http.get('langs.json')
         .then(function (r) {
           $scope._ = r.data;
           console.log(r.data);
@@ -66,15 +66,15 @@
 </head>
 <body>
 <div ng-controller="ns7llCtrl" class="ns7ll container">
-  <h1 class="display-3 mt-5 border-bottom"><samp>lang-logos</samp></h1>
+  <h1 class="display-3 mt-5 border-bottom"><samp>lang-lang</samp></h1>
   <div class="mb-5">
-    An incomplete list of programming languages and their most recognized or official logos
+    an incomplete list of programming languages and their official or most recognized logos
     <br/>
-    Compiled by <a href="http://nafsadh.com">nafSadh</a> on <a href="https://github.com/nafSadh/lang-logos">github</a>
+    compiled by <a href="http://nafsadh.com">nafSadh</a> on <a href="https://github.com/lang-lang/lang-lang">github</a>
 
   </div>
   <div class="row logo-cards" >
-    <div class="card m-2 border-light" style="width: 16rem;" ng-repeat="ll in _.langLogos">
+    <div class="card m-2 border-light" style="width: 16rem;" ng-repeat="ll in _.langs">
       <div class="card-header">
         <h5 class="card-title text-secondary">{{ll.lang}}</h5>
       </div>
