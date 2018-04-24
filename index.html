@@ -97,28 +97,39 @@
       <div class="card-footer bg-transparent border-white">
         <hr class="mb-2"/>
         <div class="btn-group" role="group" >
-          <a class="btn btn-light"  target="_blank" ng-if="ll.docs" title="Official Documentation"
+          <a class="btn btn-light"  target="_blank" ng-if="ll.docs"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Official Documentation"
              ng-href="{{ll.docs}}" style="color:#555">
             <i class="fas fa-book"></i>
           </a>
-          <a class="btn btn-light" target="_blank" ng-hide="ll.wiki" title="Read on Wikipedia"
+          <a class="btn btn-light" target="_blank" ng-hide="ll.wiki"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Read on Wikipedia"
              ng-href="https://en.wikipedia.org/wiki/{{ll.lang|urlEncode}} (programming language)">
             <i class="fab fa-wikipedia-w"></i>
           </a>
-          <a class="btn btn-light" target="_blank" ng-if="ll.wiki" title="Read on Wikipedia"
+          <a class="btn btn-light" target="_blank" ng-if="ll.wiki"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Read on Wikipedia"
              ng-href="https://en.wikipedia.org/wiki/{{ll.wiki|urlEncode}}">
             <i class="fab fa-wikipedia-w"></i>
           </a>
-          <a class="btn btn-light"  target="_blank" ng-if="ll.hl" title="Hello World! Program"
+          <a class="btn btn-light"  target="_blank" ng-if="ll.hl"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Hello World! Program"
              ng-href="https://github.com/hello-lang/{{ll.hl}}">
             <i class="fas fa-terminal"></i>
           </a>
-          <a class="btn btn-light"  target="_blank" title="Projects on Github"
+          <a class="btn btn-light"  target="_blank"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Projects on Github"
              ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
             <i class="fab fa-github"></i>
           </a>
-          <a class="btn btn-light"  target="_blank" title="Get help from StackOverflow"
-             data-toggle="tooltip" data-placement="bottom"
+          <a class="btn btn-light"  target="_blank"
+             data-toggle="tooltip" data-placement="bottom" tooltip
+             title="Get help from StackOverflow"
              ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
             <i class="fab fa-stack-overflow"></i>
           </a>
