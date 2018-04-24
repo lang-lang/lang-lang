@@ -48,6 +48,14 @@
           }
         };
       });
+      ns7llApp.directive('tooltip', function(){
+            return {
+                restrict: 'A',
+                link: function(scope, element, attrs){
+                    element.tooltip();
+                }
+            };
+        });
 
       ns7llApp.controller('ns7llCtrl', function ($scope, $http) {
         $http.get('langs.json')
@@ -60,7 +68,6 @@
       ns7llApp.filter('urlEncode', function () {
         return window.encodeURIComponent;
       });
-
     })();
   </script>
 </head>
@@ -111,6 +118,7 @@
             <i class="fab fa-github"></i>
           </a>
           <a class="btn btn-light"  target="_blank" title="Get help from StackOverflow"
+             data-toggle="tooltip" data-placement="bottom"
              ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
             <i class="fab fa-stack-overflow"></i>
           </a>
@@ -122,6 +130,7 @@
   <script>
     $(function () {
       console.log('Doc Init');
+        $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
 </body>
