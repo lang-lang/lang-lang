@@ -82,7 +82,7 @@
 
   </div>
   <div class="row logo-cards" >
-    <div class="card m-2 border-light" style="width: 16rem;" ng-repeat="ll in _.langs">
+    <div class="card border-light lang-card" ng-repeat="ll in _.langs">
       <div class="card-header">
         <h5 class="card-title text-secondary">{{ll.lang}}</h5>
       </div>
@@ -96,7 +96,7 @@
         <p class="card-text">{{ll.desc}}</p>
       </div>
       <div class="card-footer bg-transparent border-white">
-        <hr class="mb-2"/>
+        <hr class="mb-1"/>
         <div class="btn-group" role="group" >
           <a class="btn btn-light"  target="_blank" ng-if="ll.docs"
              title="Official Documentation" data-placement="bottom" tooltip
