@@ -82,15 +82,15 @@
 
   </div>
   <div class="row logo-cards" >
-    <div class="card border-light lang-card" ng-repeat="ll in _.langs">
-      <div class="card-header">
-        <h5 class="card-title text-secondary">{{ll.lang}}</h5>
+    <div class="lang-card card border-light" ng-repeat="ll in _.langs">
+      <div class="lc-header card-header d-none d-sm-block">
+        <h5 class="lc-title card-title text-secondary">{{ll.lang}}</h5>
       </div>
-      <div class="card-body pb-0">
-        <div class="text-center align-middle" style="height:8rem;">
-          <img ng-if="ll.logo" class="" ng-src="{{ll.logo}}" style="max-height: 6rem">
-          <code ng-if="ll.logot" class="text-muted" style="font-size: 6rem">{{ll.logot}}</code>
-          <code ng-if="ll.monogram" class="text-muted" style="font-size: 3rem">{{ll.monogram}}</code>
+      <div class="lc-body card-body pb-0">
+        <div class="lc-logo text-center align-middle">
+          <img ng-if="ll.logo"      class="lc-logo-img" ng-src="{{ll.logo}}">
+          <code ng-if="ll.notLogo"  class="lc-logo-not  text-muted" >{{ll.notLogo}}</code>
+          <code ng-if="ll.symTex"   class="lc-logo-txt  text-muted" >{{ll.symTex}}</code>
         </div>
         <hr/>
         <p class="card-text">{{ll.desc}}</p>

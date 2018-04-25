@@ -1,39 +1,50 @@
-/* Extra small devices (portrait phones, less than 576px)*/
+
+/* VARIOUS SCREEN SIZES: */
+
+/* xs: Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-  html {
-    font-size: 18pt;
-  }
-  .lang-card{  }
+  html { font-size: 13pt; }
+  .lang-card{  width: 100%;}
 }
 
-/*Small devices (landscape phones, 576px and up) C:540 */
+/* sm: Small devices (landscape phones, 576px and up) C:540 */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  html {
-    font-size: 15pt;
-  }
+  html { font-size: 13pt; }
   .lang-card{ width: 260px; margin: 4px; }
 }
 
-/* Medium devices (tablets, 768px and up) C:720 */
+/* md: Medium devices (tablets, 768px and up) C:720 */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  html {
-    font-size: 12pt;
-  }
+  html { font-size: 12pt; }
   .lang-card{ width: 230px; margin: 4px; }
 }
 
-/* Large devices (desktops, 992px and up) C:960*/
+/* lg: Large devices (desktops, 992px and up) C:960*/
 @media (min-width: 992px) {
-  html {
-    font-size: 12pt;
-  }
+  html { font-size: 12pt; }
   .lang-card{ width: 230px; margin: 4px; }
 }
 
-/* Extra large devices (large desktops, 1200px and up) C:1140*/
+/* xl: Extra large devices (large desktops, 1200px and up) C:1140*/
 @media (min-width: 1200px) {
-  html {
-    font-size: 12pt;
-  }
+  html { font-size: 12pt; }
   .lang-card{ width: 275px; margin: 4px; }
+}
+
+/* BI-CLASSIFIED SCREENS: XS vs OTHERS */
+
+/* XS */
+@media (max-width: 575.98px) {
+  .display-3  { font-size: 2.5rem; }
+  .lc-logo img { height:6rem; }
+  .lc-logo .lc-logo-not { font-size: 6rem; }
+  .lc-logo .lc-logo-txt { font-size: 3rem; }
+}
+
+/* OTHERS */
+@media (min-width: 576px) {
+  .lc-logo{height:8rem;}
+  .lc-logo img { height:6rem; }
+  .lc-logo .lc-logo-not { font-size: 6rem; }
+  .lc-logo .lc-logo-txt { font-size: 3rem; }
 }

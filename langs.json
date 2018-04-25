@@ -2,7 +2,7 @@
   "langs": [
     {
       "lang": "C",
-      "logot": "C",
+      "notLogo": "C",
       "desc": "static type, procedural, structured",
       "hl"  : "C"
     },
@@ -39,7 +39,7 @@
     },
     {
       "lang": "Pascal",
-      "monogram": "pascal",
+      "symTex": "pascal",
       "desc": "strong type, imperative, structured"
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "lang": "Prolog",
-      "logot": "?-",
+      "notLogo": "?-",
       "desc": "logic programming"
     },
     {
