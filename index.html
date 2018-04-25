@@ -92,11 +92,10 @@
           <code ng-if="ll.notLogo"  class="lc-logo-not  text-muted" >{{ll.notLogo}}</code>
           <code ng-if="ll.symTex"   class="lc-logo-txt  text-muted" >{{ll.symTex}}</code>
         </div>
-        <hr/>
-        <p class="card-text">{{ll.desc}}</p>
+        <!--<hr class="d-none d-sm-block"/>-->
+        <div class="lc-desc card-text">{{ll.desc}}</div>
       </div>
       <div class="card-footer bg-transparent border-white">
-        <hr class="mb-1"/>
         <div class="btn-group" role="group" >
           <a class="btn btn-light"  target="_blank" ng-if="ll.docs"
              title="Official Documentation" data-placement="bottom" tooltip

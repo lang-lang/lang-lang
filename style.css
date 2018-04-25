@@ -36,9 +36,12 @@
 /* XS */
 @media (max-width: 575.98px) {
   .display-3  { font-size: 2.5rem; }
-  .lc-logo img { height:6rem; }
-  .lc-logo .lc-logo-not { font-size: 6rem; }
-  .lc-logo .lc-logo-txt { font-size: 3rem; }
+  .lc-body {display: flex;}
+  .lc-logo { height:6rem; width: 6rem; padding-right: 1rem;}
+  .lc-logo img { height:5rem; max-width: 5rem;}
+  .lc-logo .lc-logo-not { font-size: 4rem; }
+  .lc-logo .lc-logo-txt { font-size: 2rem; }
+  .lc-desc {  }
 }
 
 /* OTHERS */
@@ -47,4 +50,6 @@
   .lc-logo img { height:6rem; }
   .lc-logo .lc-logo-not { font-size: 6rem; }
   .lc-logo .lc-logo-txt { font-size: 3rem; }
+  .lc-desc { border-top: 1px solid #eee; margin-top: 1rem; padding-top: 1rem;}
+
 }
