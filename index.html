@@ -28,6 +28,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
   <script src="ui-bootstrap-3.0.3.min.js"></script>
+  <script src="angular-filter.min.js"></script>
 
   <!-- local styles and scripts -->
   <link rel="stylesheet" href="style.css">
@@ -36,7 +37,7 @@
   <script>
     (function () {
 
-      const ns7llApp = angular.module('ns7llApp', ['ngSanitize', 'ui.bootstrap']);
+      const ns7llApp = angular.module('ns7llApp', ['ngSanitize', 'ui.bootstrap', 'angular.filter']);
       ns7llApp.directive("ngBindHtmlCompile", function ($compile, $sce) {
         return {
           restrict: "A",
@@ -82,8 +83,18 @@
     compiled by <a href="http://nafsadh.com">nafSadh</a> on <a href="https://github.com/lang-lang/lang-lang">github</a>
 
   </div>
-  <div class="row logo-cards">
-    <div class="lang-card card border-light rounded-0" ng-repeat="ll in _.langs">
+  <div class="input-group mb-3 ">
+    <div class="input-group-prepend">
+      <span class="input-group-text rounded-0 border-light text-muted bg-light">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+    <input type="text" class="form-control rounded-0 border-light" placeholder="search"
+           ng-model="search" ng-minlength="1" ng-maxlength="20"/>
+  </div>
+  <div class="row lang-cards">
+    <div ng-repeat="ll in _.langs | filterBy:['lang','desc','docs']:search"
+         class="lang-card card border-light rounded-0" >
       <div class="lc-header card-header rounded-0 d-none d-sm-block">
         <h5 class="lc-title card-title mb-0">{{ll.lang}}</h5>
       </div>
