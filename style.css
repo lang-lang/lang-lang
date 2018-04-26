@@ -50,19 +50,37 @@
   .lc-logo img { max-height:5rem; max-width: 5rem;}
   .lc-logo .lc-logo-not { font-size: 4rem; }
   .lc-logo .lc-logo-txt { font-size: 2rem; }
-  .lc-desc { width: 100%; }
+  .lc-core { width: 100%; }
+  .lc-desc {font-size: .85rem; color: #333;}
   .pull-bottom {position:  absolute; bottom: 1rem;}
 }
 
 /* OTHERS */
 @media (min-width: 576px) {
   .lang-card{ }
-  .lang-card:hover{ background: #fcfeff;  }
-  .lc-header { border-bottom-color: #BBDEFB; color: #2196F3; }
+  .lc-header {
+    border-bottom-color: #BBDEFB; /*blue-100*/
+  }
   .lc-logo{height:8rem; }
   .lc-logo img { height:6rem; max-width: 7rem;}
   .lc-logo .lc-logo-not { font-size: 6rem; }
   .lc-logo .lc-logo-txt { font-size: 3rem; }
-  .lc-desc { border-top: 1px solid #eee; margin-top: 1rem; padding-top: 1rem;}
+  .lc-core { border-top: 1px solid #eee; margin-top: 1rem; padding-top: 1rem;}
 
+}
+
+
+/* COMMON */
+.lc-title{
+  color: #2196F3; /*blue-500*/
+}
+.lang-card:hover {
+  background: #fcfeff;
+}
+.lang-card:hover .lc-header {
+  background: #E3F2FD; /*blue-50*/
+}
+.lang-card:hover .btn-light {
+  background: #E3F2FD; /*blue-50*/
+  color: #0D47A1; /*blue-900*/
 }
