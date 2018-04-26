@@ -103,6 +103,7 @@
           <div class="media h-100 pb-0">
             <div class="align-self-center w-100 text-center">
               <img ng-if="ll.logo" class="lc-logo-img" ng-src="{{ll.logo}}">
+              <img ng-if="ll.logoSm" class="lc-logo-img-sm" ng-src="{{ll.logoSm}}">
               <code ng-if="ll.notLogo" class="lc-logo-not  text-muted">{{ll.notLogo}}</code>
               <code ng-if="ll.symTex" class="lc-logo-txt  text-muted">{{ll.symTex}}</code>
             </div>
@@ -114,13 +115,13 @@
             {{ll.desc}}
           </div>
           <div class="d-sm-none pull-bottom">
-            <div class="btn-group" role="group" ng-include="'buttons.html'"></div>
+            <div class="btn-group btn-group-sm" role="group" ng-include="'buttons.html'"></div>
           </div>
         </div>
       </div>
       <div class="card-footer bg-transparent border-0 d-none d-sm-block mt-0 pt-0">
         <hr class="mb-1 mt-0"/>
-        <div class="btn-group" role="group" ng-include="'buttons.html'">
+        <div class="btn-group btn-group-sm" role="group" ng-include="'buttons.html'">
         </div>
       </div>
     </div>
@@ -151,6 +152,13 @@
      title="Get help from StackOverflow" data-placement="bottom" tooltip
      ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
     <i class="fab fa-stack-overflow"></i>
+  </a>
+  <a class="btn btn-light" target="_blank" ng-if="ll.tut"
+     title="Get help from StackOverflow" data-placement="bottom" tooltip
+     ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
+    <svg id="i-book" viewBox="0 0 32 32" width="1rem" height="1rem" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M16 7 C16 7 9 1 2 6 L2 28 C9 23 16 28 16 28 16 28 23 23 30 28 L30 6 C23 1 16 7 16 7 Z M16 7 L16 28" />
+    </svg>
   </a>
 </script>
 <script>
