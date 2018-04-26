@@ -93,7 +93,7 @@
            ng-model="search" ng-minlength="1" ng-maxlength="20"/>
   </div>
   <div class="row lang-cards">
-    <div ng-repeat="ll in _.langs | filterBy:['lang','desc','docs']:search"
+    <div ng-repeat="ll in _.langs | filterBy:['lang','desc','docs', 'aka']:search"
          class="lang-card card border-light rounded-0" >
       <div class="lc-header card-header rounded-0 d-none d-sm-block">
         <h5 class="lc-title card-title mb-0">{{ll.lang}}</h5>

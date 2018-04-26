@@ -15,6 +15,7 @@
       "lang": "C#",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg",
       "wiki": "C_Sharp_(programming_language)",
+      "aka" : "C Sharp",
       "desc": "strong type, object oriented, functional, structured; .Net"
     },
     {
@@ -33,9 +34,9 @@
       "desc": "static/strong type, object oriented, structured; JVM"
     },
     {
-      "lang": "JavaScript",
+      "lang"  : "JavaScript",
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-      "desc": "aka ECMAScript, dynamic/duck typing, functional event driven"
+      "desc"  : "aka ECMAScript, dynamic/duck typing, functional event driven"
     },
     {
       "lang"  : "Kotlin",
