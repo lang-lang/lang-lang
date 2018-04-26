@@ -84,11 +84,11 @@
   <div class="row logo-cards" >
     <div class="lang-card card border-light" ng-repeat="ll in _.langs">
       <div class="lc-header card-header d-none d-sm-block">
-        <h5 class="lc-title card-title text-secondary">{{ll.lang}}</h5>
+        <h5 class="lc-title card-title mb-0">{{ll.lang}}</h5>
       </div>
-      <div class="lc-body card-body pb-0">
+      <div class="lc-body card-body">
         <div class="lc-logo">
-          <div class="media h-100 ">
+          <div class="media h-100 pb-0">
             <div class="align-self-center w-100 text-center">
               <img ng-if="ll.logo" class="lc-logo-img" ng-src="{{ll.logo}}">
               <code ng-if="ll.notLogo" class="lc-logo-not  text-muted">{{ll.notLogo}}</code>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="card-footer bg-transparent border-white d-none d-sm-block">
+      <div class="card-footer bg-transparent border-0 d-none d-sm-block">
         <hr class="mb-1"/>
         <div class="btn-group" role="group"  ng-include="'buttons.html'">
         </div>

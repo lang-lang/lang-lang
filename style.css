@@ -36,19 +36,30 @@
 /* XS */
 @media (max-width: 575.98px) {
   .display-3  { font-size: 2.5rem; }
-  .lc-body {display: flex; height: 8rem;}
+  .lang-card:first-child{
+    border-top: .5rem solid #ddd;
+  }
+  .lang-card {
+    border-radius: 0!important;
+    border: 0;
+    border-top: .5rem solid #ddd;
+    border-bottom: 1px solid #2196F3 !important;
+  }
+  .lc-body {display: flex; height: 9rem;}
   .lc-logo { height:7rem; width: 8rem; padding-right: 1rem;}
   .lc-logo img { max-height:5rem; max-width: 5rem;}
   .lc-logo .lc-logo-not { font-size: 4rem; }
   .lc-logo .lc-logo-txt { font-size: 2rem; }
   .lc-desc { width: 100%; }
-  .pull-bottom {position:  absolute; bottom: .5rem;}
+  .pull-bottom {position:  absolute; bottom: 1rem;}
 }
 
 /* OTHERS */
 @media (min-width: 576px) {
+  .lang-card:hover{ background: #fcfeff; }
+  .lc-header { border-bottom-color: #2196F3; color: #0D47A1; }
   .lc-logo{height:8rem; }
-  .lc-logo img { height:6rem; }
+  .lc-logo img { height:6rem; max-width: 7rem;}
   .lc-logo .lc-logo-not { font-size: 6rem; }
   .lc-logo .lc-logo-txt { font-size: 3rem; }
   .lc-desc { border-top: 1px solid #eee; margin-top: 1rem; padding-top: 1rem;}
