@@ -10,25 +10,25 @@
 /* sm: Small devices (landscape phones, 576px and up) C:540 */
 @media (min-width: 576px) and (max-width: 767.98px) {
   html { font-size: 13pt; }
-  .lang-card{ width: 256px; margin: 6px; }
+  .lang-card{ width: 250px; margin: 6px; }/* 2/row */
 }
 
 /* md: Medium devices (tablets, 768px and up) C:720 */
 @media (min-width: 768px) and (max-width: 991.98px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 226px; margin: 6px; }
+  .lang-card{ width: 223px; margin: 6px; }/* 3/row */
 }
 
 /* lg: Large devices (desktops, 992px and up) C:960*/
 @media (min-width: 992px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 226px; margin: 6px; }
+  .lang-card{ width: 224px; margin: 6px; }/* 4/row */
 }
 
 /* xl: Extra large devices (large desktops, 1200px and up) C:1140*/
 @media (min-width: 1200px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 271px; margin: 6px; }
+  .lang-card{ width: 269px; margin: 6px; }
 }
 
 /* BI-CLASSIFIED SCREENS: XS vs OTHERS */
@@ -57,6 +57,7 @@
 
 /* OTHERS */
 @media (min-width: 576px) {
+  .lang-cards{padding-left: 8px;}
   .lang-card{ }
   .lc-header {
     border-bottom-color: #BBDEFB; /*blue-100*/
