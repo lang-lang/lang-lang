@@ -10,25 +10,25 @@
 /* sm: Small devices (landscape phones, 576px and up) C:540 */
 @media (min-width: 576px) and (max-width: 767.98px) {
   html { font-size: 13pt; }
-  .lang-card{ width: 260px; margin: 4px; }
+  .lang-card{ width: 256px; margin: 6px; }
 }
 
 /* md: Medium devices (tablets, 768px and up) C:720 */
 @media (min-width: 768px) and (max-width: 991.98px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 230px; margin: 4px; }
+  .lang-card{ width: 226px; margin: 6px; }
 }
 
 /* lg: Large devices (desktops, 992px and up) C:960*/
 @media (min-width: 992px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 230px; margin: 4px; }
+  .lang-card{ width: 226px; margin: 6px; }
 }
 
 /* xl: Extra large devices (large desktops, 1200px and up) C:1140*/
 @media (min-width: 1200px) {
   html { font-size: 12pt; }
-  .lang-card{ width: 275px; margin: 4px; }
+  .lang-card{ width: 271px; margin: 6px; }
 }
 
 /* BI-CLASSIFIED SCREENS: XS vs OTHERS */
@@ -43,7 +43,7 @@
     border-radius: 0!important;
     border: 0;
     border-top: .5rem solid #ddd;
-    border-bottom: 1px solid #2196F3 !important;
+    border-bottom: 1px solid #BBDEFB !important;
   }
   .lc-body {display: flex; height: 9rem;}
   .lc-logo { height:7rem; width: 8rem; padding-right: 1rem;}
@@ -56,8 +56,9 @@
 
 /* OTHERS */
 @media (min-width: 576px) {
-  .lang-card:hover{ background: #fcfeff; }
-  .lc-header { border-bottom-color: #2196F3; color: #0D47A1; }
+  .lang-card{ }
+  .lang-card:hover{ background: #fcfeff;  }
+  .lc-header { border-bottom-color: #BBDEFB; color: #2196F3; }
   .lc-logo{height:8rem; }
   .lc-logo img { height:6rem; max-width: 7rem;}
   .lc-logo .lc-logo-not { font-size: 6rem; }
