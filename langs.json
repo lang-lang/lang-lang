@@ -1,10 +1,10 @@
 {
   "langs": [
     {
-      "lang": "C",
+      "lang"   : "C",
       "notLogo": "C",
-      "desc": "static type, procedural, structured",
-      "hl"  : "C"
+      "desc"   : "static type, procedural, structured",
+      "hl"     : "C"
     },
     {
       "lang": "C++",
@@ -14,8 +14,8 @@
     {
       "lang": "C#",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg",
-      "wiki":"C_Sharp_(programming_language)",
-      "desc": "strong type, object oriented, functional, structured"
+      "wiki": "C_Sharp_(programming_language)",
+      "desc": "strong type, object oriented, functional, structured; .Net"
     },
     {
       "lang": "Go",
@@ -30,17 +30,24 @@
     {
       "lang": "Java",
       "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
-      "desc": "static/strong type, object oriented, structured"
+      "desc": "static/strong type, object oriented, structured; JVM"
     },
     {
       "lang": "JavaScript",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      "logoSm": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "desc": "aka ECMAScript, dynamic/duck typing, functional event driven"
     },
     {
-      "lang": "Pascal",
+      "lang"  : "Kotlin",
+      "logoSm": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
+      "desc"  : "static type, object oriented, structured; JVM, LLVM",
+      "docs"  : "https://kotlinlang.org/docs/reference/",
+      "tut"   : "https://kotlinlang.org/docs/tutorials/"
+    },
+    {
+      "lang"  : "Pascal",
       "symTex": "pascal",
-      "desc": "strong type, imperative, structured"
+      "desc"  : "strong type, imperative, structured"
     },
     {
       "lang": "Perl",
@@ -53,9 +60,9 @@
       "desc": "weak type, functional, object oriented"
     },
     {
-      "lang": "Prolog",
+      "lang"   : "Prolog",
       "notLogo": "?-",
-      "desc": "logic programming"
+      "desc"   : "logic programming"
     },
     {
       "lang": "Python",
@@ -64,9 +71,10 @@
       "docs": "https://docs.python.org/"
     },
     {
-      "lang": "",
-      "logo": "",
-      "desc": ""
+      "lang": "Scala",
+      "logo": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
+      "desc": "strong type, functional, object oriented; JVM",
+      "docs": "https://docs.scala-lang.org/"
     }
   ]
 }
