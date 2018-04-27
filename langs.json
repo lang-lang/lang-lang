@@ -56,6 +56,12 @@
       "desc": "dynamic type, functional, object oriented"
     },
     {
+      "lang": "Perl 6",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/85/Camelia.svg",
+      "desc": "dynamic type, functional, object oriented",
+      "docs": "https://docs.perl6.org/"
+    },
+    {
       "lang": "PHP",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
       "desc": "weak type, functional, object oriented"
