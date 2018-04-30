@@ -66,6 +66,11 @@
           $scope._ = r.data;
           console.log(r.data);
         });
+        $scope.langOrder= function (ll) {
+          return (ll['ordinal']===undefined || ll['ordinal']===null)
+              ? ll.lang
+              : ll.ordinal+ll.lang;
+        }
       });
 
       ns7llApp.filter('urlEncode', function () {
@@ -93,7 +98,9 @@
            ng-model="search" ng-minlength="1" ng-maxlength="20"/>
   </div>
   <div class="row lang-cards">
-    <div ng-repeat="ll in _.langs | filterBy:['lang','desc','docs', 'aka']:search"
+    <div ng-repeat="ll in _.langs
+                      | orderBy:langOrder
+                      | filterBy:['lang','desc','docs', 'aka']:search"
          class="lang-card card border-light rounded-0" >
       <div class="lc-header card-header rounded-0 d-none d-sm-block">
         <h5 class="lc-title card-title mb-0">{{ll.lang}}</h5>
@@ -153,9 +160,9 @@
      ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
     <i class="fab fa-stack-overflow"></i>
   </a>
-  <a class="btn btn-light" target="_blank" ng-if="ll.tut"
+  <a class="btn btn-light" target="_blank" ng-if="ll.learn"
      title="Learn from a tutorial" data-placement="bottom" tooltip
-     ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
+     ng-href="{{ll.learn}}">
     <svg id="i-book" viewBox="0 0 32 32" width="1rem" height="1rem" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
       <path d="M16 7 C16 7 9 1 2 6 L2 28 C9 23 16 28 16 28 16 28 23 23 30 28 L30 6 C23 1 16 7 16 7 Z M16 7 L16 28"></path>
     </svg>

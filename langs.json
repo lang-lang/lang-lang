@@ -43,7 +43,16 @@
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
       "desc"  : "static type, object oriented, structured; JVM, LLVM",
       "docs"  : "https://kotlinlang.org/docs/reference/",
-      "tut"   : "https://kotlinlang.org/docs/tutorials/"
+      "learn" : "https://kotlinlang.org/docs/tutorials/"
+    },
+    {
+      "lang": "Common Lisp",
+      "ordinal":"lisp-common",
+      "logo": "https://common-lisp.net/static/imgs/lisplogo.png",
+      "logoRef": "https://common-lisp.net",
+      "desc": "dynamic strong type; LISP dialect; procedural, object-oriented",
+      "docs": "https://common-lisp.net/",
+      "learn": "https://common-lisp.net/tutorials/"
     },
     {
       "lang"  : "Pascal",
