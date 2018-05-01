@@ -76,6 +76,13 @@
       ns7llApp.filter('urlEncode', function () {
         return window.encodeURIComponent;
       });
+      ns7llApp.filter('spaceToDash',function() {
+        return function(input) {
+          if (input) {
+            return input.replace(/\s+/g, '-');
+          }
+        }
+      });
     })();
   </script>
 </head>
@@ -152,12 +159,12 @@
   </a>
   <a class="btn btn-light" target="_blank"
      title="Projects on Github" data-placement="bottom" tooltip
-     ng-href="https://github.com/search?q=language%3A{{ll.lang|urlEncode}}&type=Repositories">
+     ng-href="https://github.com/search?q=language%3A{{ll.lang|spaceToDash|urlEncode}}&type=Repositories">
     <i class="fab fa-github"></i>
   </a>
   <a class="btn btn-light" target="_blank"
      title="Get help from StackOverflow" data-placement="bottom" tooltip
-     ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|urlEncode}}">
+     ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|spaceToDash|urlEncode}}">
     <i class="fab fa-stack-overflow"></i>
   </a>
   <a class="btn btn-light" target="_blank" ng-if="ll.learn"
