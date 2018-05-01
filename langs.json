@@ -19,6 +19,13 @@
       "desc": "strong type, object oriented, functional, structured; .Net"
     },
     {
+      "lang": "Clojure",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
+      "desc": "dynamic, strong type; Lisp dialect; functional; JVM, CLR, JS",
+      "docs": "https://clojure.org/reference/documentation",
+      "learn": "https://clojure.org/guides/guides"
+    },
+    {
       "lang": "Go",
       "logo": "https://golang.org/doc/gopher/gopherbw.png",
       "desc": "strong type, procedural, functional"
@@ -44,6 +51,12 @@
       "desc"  : "static type, object oriented, structured; JVM, LLVM",
       "docs"  : "https://kotlinlang.org/docs/reference/",
       "learn" : "https://kotlinlang.org/docs/tutorials/"
+    },
+    {
+      "lang": "Lisp",
+      "ordinal":"lisp-0",
+      "notLogo": "λ",
+      "desc": "dynamic strong type;  functional, procedural, reflective, meta"
     },
     {
       "lang": "Common Lisp",
