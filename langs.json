@@ -1,6 +1,21 @@
 {
   "langs": [
     {
+      "lang"  : "Ada",
+      "symTex": "ada",
+      "desc"  : "structured, statically typed, imperative, wide-spectrum, object-oriented"
+    },
+    {
+      "lang"  : "B",
+      "symTex": "B",
+      "desc"  : "typeless"
+    },
+    {
+      "lang"  : "BCPL",
+      "symTex": "bcpl",
+      "desc"  : "typeless"
+    },
+    {
       "lang"   : "C",
       "notLogo": "C",
       "desc"   : "static type, procedural, structured",
@@ -32,6 +47,20 @@
       "learn": "https://clojure.org/guides/guides"
     },
     {
+      "lang"  : "CPL",
+      "symTex": "cpl",
+      "desc"  : "procedural, imperative, structured, functional"
+    },
+    {
+      "lang"  : "D",
+      "logo": "https://dlang.org/images/dlogo.svg",
+      "desc"  : "strong/static type; object oriented, imperative, system",
+      "home" : "https://dlang.org/",
+      "learn" : "https://wiki.dlang.org/Tutorials",
+      "spec" : "https://dlang.org/spec/spec.html"
+      
+    },
+    {
       "lang": "Go",
       "logo": "https://golang.org/doc/gopher/gopherbw.png",
       "desc": "strong type, procedural, functional",
@@ -55,7 +84,8 @@
       "lang"  : "JavaScript",
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "desc"  : "aka ECMAScript, dynamic/duck typing, functional event driven",
-      "docs"  : "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      "docs"  : "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "spec"  : "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
     },
     {
       "lang"  : "Kotlin",
