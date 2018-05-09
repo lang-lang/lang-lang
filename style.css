@@ -87,3 +87,6 @@
   background: #E3F2FD; /*blue-50*/
   color: #0D47A1; /*blue-900*/
 }
+.btn-light.lighter {
+  color: #666;
+}
