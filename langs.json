@@ -9,41 +9,53 @@
     {
       "lang": "C++",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
-      "desc": "static type, procedural, functional, object oriented"
+      "desc": "static type, procedural, functional, object oriented",
+      "home": "https://isocpp.org/",
+      "docs": "http://en.cppreference.com/w/",
+      "spec": "https://isocpp.org/std/the-standard",
+      "learn": "http://www.cplusplus.com/"
     },
     {
       "lang": "C#",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg",
       "wiki": "C_Sharp_(programming_language)",
       "aka" : "C Sharp",
-      "desc": "strong type, object oriented, functional, structured; .Net"
+      "desc": "strong type, object oriented, functional, structured; .Net",
+      "docs": "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
     },
     {
       "lang": "Clojure",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
       "desc": "dynamic, strong type; Lisp dialect; functional; JVM, CLR, JS",
+      "home": "https://clojure.org/",
       "docs": "https://clojure.org/reference/documentation",
       "learn": "https://clojure.org/guides/guides"
     },
     {
       "lang": "Go",
       "logo": "https://golang.org/doc/gopher/gopherbw.png",
-      "desc": "strong type, procedural, functional"
+      "desc": "strong type, procedural, functional",
+      "home": "https://golang.org/",
+      "docs": "https://golang.org/doc"
     },
     {
       "lang": "Haskell",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg ",
-      "desc": "strong type, functional, lazy, moduler"
+      "desc": "strong type, functional, lazy, moduler",
+      "home": "https://www.haskell.org/"
     },
     {
       "lang": "Java",
       "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
-      "desc": "static/strong type, object oriented, structured; JVM"
+      "desc": "static/strong type, object oriented, structured; JVM",
+      "docs": "https://docs.oracle.com/en/java/",
+      "home": "http://oracle.com/java/"
     },
     {
       "lang"  : "JavaScript",
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-      "desc"  : "aka ECMAScript, dynamic/duck typing, functional event driven"
+      "desc"  : "aka ECMAScript, dynamic/duck typing, functional event driven",
+      "docs"  : "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
       "lang"  : "Kotlin",
