@@ -90,3 +90,6 @@
 .btn-light.lighter {
   color: #666;
 }
+.dropdown-toggle::after {
+  display: none;
+}
