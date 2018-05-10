@@ -87,9 +87,20 @@
   background: #E3F2FD; /*blue-50*/
   color: #0D47A1; /*blue-900*/
 }
+.lang-card:hover .btn-light:hover {
+  background: #82B1FF; /*blue-a100*/
+  border-color: #82B1FF;
+  color: #1A237E; /*indigo-900*/
+}
+.lang-card:hover .btn-outline-light:hover {
+  color: #E3F2FD; /*blue-50*/
+  background: #1565C0; /*blue-800*/
+  border-color: #1565C0; /*blue-800*/
+}
+
 .btn-light.lighter {
   color: #666;
 }
-.dropdown-toggle::after {
+.dropup .dropdown-toggle::after{
   display: none;
 }

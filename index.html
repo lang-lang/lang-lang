@@ -130,8 +130,18 @@
         $http.get('langs.json')
         .then(function (r) {
           $scope._ = r.data;
+          if($scope._.langs) {
+            for (let i = 0; i < $scope._.langs.length; i++ ) {
+              let ll = $scope._.langs[i];
+              ll.meta = {
+                btnCnt: $scope.btnCnt(ll),
+                orderKey: $scope.langOrder(ll)
+              };
+            }
+          }
           console.log(r.data);
         });
+
         $scope.langOrder= function (ll) {
           return (ll['ordinal']===undefined || ll['ordinal']===null)
               ? ll.lang
@@ -187,7 +197,7 @@
   </div>
   <div class="row lang-cards">
     <div ng-repeat="ll in _.langs
-                      | orderBy:langOrder
+                      | orderBy:meta.orderKey
                       | filterBy:['lang','desc','docs', 'aka']:search"
          class="lang-card card border-light rounded-0" >
       <div class="lc-header card-header rounded-0 d-none d-sm-block">
@@ -316,46 +326,38 @@
   </a>
   <a class="btn btn-light" target="_blank"
      title="Read on Wikipedia" data-placement="bottom" tooltip
-     ng-if="btnCnt(ll)<3"
+     ng-if="ll.meta.btnCnt<3"
      ng-href="https://en.wikipedia.org/wiki/{{ll.wiki ? ll.wiki : ll.lang+' (programming language)'|urlEncode}}">
     <i class="fab fa-wikipedia-w"></i>
   </a>
   <a class="btn btn-light lighter" target="_blank"
      title="Projects on Github" data-placement="bottom" tooltip
-     ng-if="btnCnt(ll)<3"
+     ng-if="ll.meta.btnCnt<3"
      ng-href="https://github.com/search?q=language%3A{{ll.lang|spaceToDash|urlEncode}}&type=Repositories">
     <i class="fab fa-github"></i>
   </a>
   <a class="btn btn-light" target="_blank"
      title="Get help from StackOverflow" data-placement="bottom" tooltip
-     ng-if="btnCnt(ll)<3"
+     ng-if="ll.meta.btnCnt<3"
      ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|spaceToDash|urlEncode}}">
     <i class="fab fa-stack-overflow"></i>
   </a>
-  <div class="btn-group btn-group-sm" role="group" ng-if="btnCnt(ll)>=4">
-    <a class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-      <i class="fas fa-caret-down"></i>
+  <div class="btn-group btn-group-sm dropup" role="group" ng-if="ll.meta.btnCnt>=4">
+    <a class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">
+      <i class="fas fa-angle-up"></i>
     </a>
-    <div class="dropdown-menu dropdown-menu-right">
+    <div class="dropdown-menu dropdown-menu-right rounded-0">
       <a class="dropdown-item " target="_blank"
-         title="Read on Wikipedia" data-placement="bottom" tooltip
          ng-href="https://en.wikipedia.org/wiki/{{ll.wiki ? ll.wiki : ll.lang+' (programming language)'|urlEncode}}">
-        <i class="fab fa-wikipedia-w"></i>
-      </a>
-      <a class="dropdown-item " target="_blank" ng-if="ll.hl"
-         title="Hello World! Program" data-placement="bottom" tooltip
-         ng-href="https://github.com/hello-lang/{{ll.hl}}">
-        <i class="fas fa-terminal"></i>
+        <small><i class="fab fa-wikipedia-w"></i> On Wikipedia</small>
       </a>
       <a class="dropdown-item lighter" target="_blank"
-         title="Projects on Github" data-placement="bottom" tooltip
          ng-href="https://github.com/search?q=language%3A{{ll.lang|spaceToDash|urlEncode}}&type=Repositories">
-        <i class="fab fa-github"></i>
+        <small><i class="fab fa-github"></i> On Github</small>
       </a>
       <a class="dropdown-item" target="_blank"
-         title="Get help from StackOverflow" data-placement="bottom" tooltip
          ng-href="https://stackoverflow.com/questions/tagged/{{ll.lang|spaceToDash|urlEncode}}">
-        <i class="fab fa-stack-overflow"></i>
+        <small><i class="fab fa-stack-overflow"></i> On StackOverflow</small>
       </a>
     </div>
   </div>
