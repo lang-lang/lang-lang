@@ -2,7 +2,7 @@
   "langs": [
     {
       "lang"  : "Ada",
-      "symTex": "ada",
+      "symTex": "Ada",
       "desc"  : "structured, statically typed, imperative, wide-spectrum, object-oriented"
     },
     {
@@ -31,12 +31,13 @@
       "learn": "http://www.cplusplus.com/"
     },
     {
-      "lang": "C#",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg",
-      "wiki": "C_Sharp_(programming_language)",
-      "aka" : "C Sharp",
-      "desc": "strong type, object oriented, functional, structured; .Net",
-      "docs": "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
+      "lang"   : "C#",
+      "ordinal": "CSharp",
+      "logo"   : "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg",
+      "wiki"   : "C_Sharp_(programming_language)",
+      "aka"    : "C Sharp",
+      "desc"   : "strong type, object oriented, functional, structured; .Net",
+      "docs"   : "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
     },
     {
       "lang": "Clojure",
@@ -140,6 +141,14 @@
       "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
       "desc": "duck type, object oriented, procedural, reflective",
       "docs": "https://docs.python.org/"
+    },
+    {
+      "lang": "Rust",
+      "logo": "https://www.rust-lang.org/logos/rust-logo-blk.svg",
+      "desc": "strong type, functional, object oriented; JVM",
+      "home": "https://www.rust-lang.org",
+      "docs": "https://doc.rust-lang.org/stable/reference/",
+      "doc2": "https://www.rust-lang.org/en-US/documentation.html"
     },
     {
       "lang": "Scala",
