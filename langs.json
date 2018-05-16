@@ -3,7 +3,10 @@
     {
       "lang"  : "Ada",
       "symTex": "Ada",
-      "desc"  : "structured, statically typed, imperative, wide-spectrum, object-oriented"
+      "desc"  : "structured, statically typed, imperative, wide-spectrum, object-oriented",
+      "home"  : "http://www.adaic.org/",
+      "spec"  : "http://www.adaic.org/ada-resources/standards/",
+      "learn" : "http://www.adaic.org/learn/materials/"
     },
     {
       "lang"  : "B",
@@ -19,16 +22,19 @@
       "lang"   : "C",
       "notLogo": "C",
       "desc"   : "static type, procedural, structured",
-      "hl"     : "C"
+      "hl"     : "C",
+      "spec"   : "http://www.open-std.org/jtc1/sc22/wg14/",
+      "docs"   : "https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html",
+      "learn"  : "http://en.cppreference.com/w/c"
     },
     {
-      "lang": "C++",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
-      "desc": "static type, procedural, functional, object oriented",
-      "home": "https://isocpp.org/",
-      "docs": "http://en.cppreference.com/w/",
-      "spec": "https://isocpp.org/std/the-standard",
-      "learn": "http://www.cplusplus.com/"
+      "lang" : "C++",
+      "logo" : "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+      "desc" : "static type, procedural, functional, object oriented",
+      "home" : "https://isocpp.org/",
+      "docs" : "http://en.cppreference.com/w/",
+      "spec" : "https://isocpp.org/std/the-standard",
+      "learn": "http://www.cplusplus.com/doc/tutorial/"
     },
     {
       "lang"   : "C#",
@@ -37,14 +43,17 @@
       "wiki"   : "C_Sharp_(programming_language)",
       "aka"    : "C Sharp",
       "desc"   : "strong type, object oriented, functional, structured; .Net",
-      "docs"   : "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
+      "home"   : "https://docs.microsoft.com/en-us/dotnet/csharp/",
+      "spec"   : "http://www.ecma-international.org/publications/standards/Ecma-334.htm",
+      "docs"   : "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/",
+      "learn"  : "https://docs.microsoft.com/en-us/dotnet/csharp/quick-starts/"
     },
     {
-      "lang": "Clojure",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
-      "desc": "dynamic, strong type; Lisp dialect; functional; JVM, CLR, JS",
-      "home": "https://clojure.org/",
-      "docs": "https://clojure.org/reference/documentation",
+      "lang" : "Clojure",
+      "logo" : "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
+      "desc" : "dynamic, strong type; Lisp dialect; functional; JVM, CLR, JS",
+      "home" : "https://clojure.org/",
+      "docs" : "https://clojure.org/reference/documentation",
       "learn": "https://clojure.org/guides/guides"
     },
     {
@@ -53,33 +62,38 @@
       "desc"  : "procedural, imperative, structured, functional"
     },
     {
-      "lang"  : "D",
-      "logo": "https://dlang.org/images/dlogo.svg",
-      "desc"  : "strong/static type; object oriented, imperative, system",
+      "lang" : "D",
+      "logo" : "https://dlang.org/images/dlogo.svg",
+      "desc" : "strong/static type; object oriented, imperative, system",
       "home" : "https://dlang.org/",
-      "learn" : "https://wiki.dlang.org/Tutorials",
-      "spec" : "https://dlang.org/spec/spec.html"
-      
+      "learn": "https://wiki.dlang.org/Tutorials",
+      "docs" : "https://dlang.org/spec/spec.html"
     },
     {
-      "lang": "Go",
-      "logo": "https://golang.org/doc/gopher/gopherbw.png",
-      "desc": "strong type, procedural, functional",
-      "home": "https://golang.org/",
-      "docs": "https://golang.org/doc"
+      "lang" : "Go",
+      "logo" : "https://golang.org/doc/gopher/gopherbw.png",
+      "desc" : "strong type, procedural, functional",
+      "home" : "https://golang.org/",
+      "spec" : "https://golang.org/ref/spec",
+      "learn": "https://tour.golang.org/",
+      "doc2" : "https://golang.org/doc"
     },
     {
       "lang": "Haskell",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg ",
       "desc": "strong type, functional, lazy, moduler",
-      "home": "https://www.haskell.org/"
+      "home": "https://www.haskell.org/",
+      "spec": "https://wiki.haskell.org/Language_and_library_specification",
+      "doc2": "https://www.haskell.org/documentation"
     },
     {
-      "lang": "Java",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
-      "desc": "static/strong type, object oriented, structured; JVM",
-      "docs": "https://docs.oracle.com/en/java/",
-      "home": "http://oracle.com/java/"
+      "lang" : "Java",
+      "logo" : "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+      "desc" : "static/strong type, object oriented, structured; JVM",
+      "docs" : "https://docs.oracle.com/en/java/",
+      "spec" : "https://docs.oracle.com/javase/specs/",
+      "home" : "http://oracle.com/java/",
+      "learn": "https://www.quora.com/Java-programming-language-What-are-some-recommended-books-and-online-resources-for-learning-Java-for-beginner-intermediate-and-advanced-programmers"
     },
     {
       "lang"  : "JavaScript",
@@ -92,28 +106,38 @@
       "lang"  : "Kotlin",
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
       "desc"  : "static type, object oriented, structured; JVM, LLVM",
-      "docs"  : "https://kotlinlang.org/docs/reference/",
-      "learn" : "https://kotlinlang.org/docs/tutorials/"
+      "doc2"  : "https://kotlinlang.org/docs/reference/",
+      "learn" : "https://kotlinlang.org/docs/tutorials/",
+      "home"  : "https://kotlinlang.org/",
+      "spec"  : "http://jetbrains.github.io/kotlin-spec/"
     },
     {
-      "lang": "Lisp",
-      "ordinal":"lisp-0",
+      "lang"   : "Lisp",
+      "ordinal": "lisp-0",
       "notLogo": "λ",
-      "desc": "dynamic strong type;  functional, procedural, reflective, meta"
+      "desc"   : "dynamic strong type;  functional, procedural, reflective, meta"
     },
     {
-      "lang": "Common Lisp",
-      "ordinal":"lisp-common",
-      "logo": "https://common-lisp.net/static/imgs/lisplogo.png",
+      "lang"   : "Common Lisp",
+      "ordinal": "lisp-common",
+      "logo"   : "https://common-lisp.net/static/imgs/lisplogo.png",
       "logoRef": "https://common-lisp.net",
-      "desc": "dynamic strong type; LISP dialect; procedural, object-oriented",
-      "docs": "https://common-lisp.net/",
-      "learn": "https://common-lisp.net/tutorials/"
+      "desc"   : "dynamic strong type; LISP dialect; procedural, object-oriented",
+      "home"   : "https://common-lisp.net/",
+      "learn"  : "https://common-lisp.net/tutorials/"
     },
     {
       "lang"  : "Pascal",
       "symTex": "pascal",
       "desc"  : "strong type, imperative, structured"
+    },
+    {
+      "lang"    : "Delphi",
+      "fullname": "Object Pascal",
+      "ordinal" : "pascal-object",
+      "symTxSm" : "delphi",
+      "desc"    : "static/dynamic type",
+      "home"    : "https://www.embarcadero.com/products/delphi"
     },
     {
       "lang": "Perl",
