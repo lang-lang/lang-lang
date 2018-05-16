@@ -37,21 +37,23 @@
   <script>
     const schema = {
       "lang":   { "btn+":0, "desc": "name of the language" },
+      "fullname":{ "btn+":0, "desc": "non-common full name of the lang" },
       "ordinal":{ "btn+":0, "desc": "an override for sort order" },
+      "aka":    { "btn+":0, "desc":  "Also know as, not displayed" },
       "desc":   { "btn+":0, "desc": "a short note about the lang"},
       "logo":   { "btn+":0, "desc": "url to logo image" },
       "logoSm": { "btn+":0, "desc": "url to logo image, displayed with smaller frame" },
       "notLogo":{ "btn+":0, "desc": "text instead of logo image"},
       "symTex": { "btn+":0, "desc": "longer text in place of logo"},
+      "symTxSm":{ "btn+":0, "desc": "longer text in place of logo"},
       "logoRef":{ "btn+":0, "desc": "reference for logo" },
       "hl":     { "btn+":1, "desc": "hello lang project" },
       "home":   { "btn+":1, "desc": "official website" },
-      "docs":   { "btn+":1, "desc": "link to documentation" },
-      "doc2":   { "btn+":1, "desc": "more docs, add only if spec is not there" },
       "spec":   { "btn+":1, "desc": "technical specification or standard" },
+      "docs":   { "btn+":1, "desc": "link to documentation" },
+      "doc2":   { "btn+":1, "desc": "more docs, cannot have values when all of docs/spec/learn has values" },
       "learn":  { "btn+":1, "desc": "link to a recommended tutorial" },
       "wiki":   { "btn+":0, "desc":  "Wikipedia entry name" },
-      "aka":    { "btn+":0, "desc":  "Also know as, not displayed" },
       "$$hashKey":{ "btn+":0, "desc":  "angular inserted" }
     };
 
@@ -154,7 +156,10 @@
                       | filterBy:['lang','desc','docs', 'aka']:search"
          class="lang-card card border-light rounded-0" >
       <div class="lc-header card-header rounded-0 d-none d-sm-block">
-        <h5 class="lc-title card-title mb-0">{{ll.lang}}</h5>
+        <h5 class="lc-title card-title mb-0">
+          {{ll.lang}}
+          <small ng-if="ll.fullname">({{ll.fullname}})</small>
+        </h5>
       </div>
       <div class="lc-body card-body">
         <div class="lc-logo">
@@ -164,6 +169,7 @@
               <img ng-if="ll.logoSm" class="lc-logo-img-sm" ng-src="{{ll.logoSm}}">
               <code ng-if="ll.notLogo" class="lc-logo-not  text-muted">{{ll.notLogo}}</code>
               <code ng-if="ll.symTex" class="lc-logo-txt  text-muted">{{ll.symTex}}</code>
+              <code ng-if="ll.symTxSm" class="lc-logo-txt  text-muted"><small>{{ll.symTxSm}}</small></code>
             </div>
           </div>
         </div>
@@ -202,31 +208,6 @@
      title="Hello World! Program" data-placement="bottom" tooltip
      ng-href="https://github.com/hello-lang/{{ll.hl}}">
     <i class="fas fa-terminal"></i>
-  </a>
-  <a class="btn btn-light lighter" target="_blank" ng-if="ll.docs"
-     title="Documentation" data-placement="bottom" tooltip
-     ng-href="{{ll.docs}}">
-    <i class="fas fa-book"></i>
-  </a>
-  <a class="btn btn-light lighter" target="_blank" ng-if="ll.doc2"
-     title="More References" data-placement="bottom" tooltip
-     ng-href="{{ll.doc2}}">
-    <svg version="1.1" width="1rem" height="1rem" fill="currentcolor" stroke="currentcolor"
-         viewBox="0 0 406 406">
-      <path d="M397.899,140.524c0-8.711-7.062-15.772-15.772-15.772h-4.41V31.544h4.41c8.71,0,15.772-7.062,15.772-15.772
-			C397.899,7.061,390.837,0,382.127,0H110.333C82.84,0,60.475,22.367,60.475,49.86v56.576c0,6.466,1.25,12.641,3.5,18.316H23.671
-			c-8.71,0-15.772,7.061-15.772,15.772s7.063,15.772,15.772,15.772h4.412v93.208h-4.412c-8.71,0-15.772,7.062-15.772,15.771
-			s7.063,15.771,15.772,15.771h40.302c-2.25,5.675-3.5,11.852-3.5,18.315v56.575c0,27.494,22.366,49.861,49.858,49.861h271.793
-			c8.712,0,15.772-7.062,15.772-15.772c0-8.709-7.063-15.771-15.772-15.771h-4.41v-93.208h4.41c8.712,0,15.772-7.062,15.772-15.771
-			s-7.063-15.771-15.772-15.771h-40.302c2.25-5.674,3.5-11.85,3.5-18.316v-56.576c0-6.466-1.25-12.642-3.5-18.316h40.302
-			C390.837,156.296,397.899,149.235,397.899,140.524z M59.628,249.504v-30.832h101.801c8.71,0,15.772-7.061,15.772-15.772
-			c0-8.711-7.062-15.772-15.772-15.772H59.628v-30.832h50.704h185.135c10.098,0,18.313,8.217,18.313,18.316v56.576
-			c0,10.101-8.218,18.316-18.313,18.316H59.628z M346.171,281.048v30.832H244.368c-8.709,0-15.771,7.062-15.771,15.772
-			s7.062,15.771,15.771,15.771h101.805v30.832h-235.84c-10.099,0-18.315-8.217-18.315-18.315v-56.576
-			c0-10.099,8.217-18.315,18.315-18.315H346.171L346.171,281.048z M346.171,62.376H244.368c-8.709,0-15.771,7.062-15.771,15.772
-			s7.062,15.772,15.771,15.772h101.805v30.832h-235.84c-10.099,0-18.315-8.217-18.315-18.316V49.86
-			c0-10.099,8.217-18.316,18.315-18.316h235.839L346.171,62.376L346.171,62.376z"></path>
-    </svg>
   </a>
   <a class="btn btn-light" target="_blank" ng-if="ll.spec"
      title="Specification | Standard" data-placement="bottom" tooltip
@@ -274,6 +255,31 @@
           c38.6,0,70.004,31.403,70.004,70.004S226.12,198.252,187.52,198.252z"></path>
       <path d="M187.52,69.186c-32.566,0-59.063,26.495-59.063,59.063c0,4.143,3.357,7.5,7.5,7.5c4.143,0,7.5-3.357,7.5-7.5
 			    c0-24.296,19.766-44.063,44.063-44.063c4.143,0,7.5-3.357,7.5-7.5S191.663,69.186,187.52,69.186z"></path>
+    </svg>
+  </a>
+  <a class="btn btn-light lighter" target="_blank" ng-if="ll.docs"
+     title="Documentation" data-placement="bottom" tooltip
+     ng-href="{{ll.docs}}">
+    <i class="fas fa-book"></i>
+  </a>
+  <a class="btn btn-light lighter" target="_blank" ng-if="ll.doc2"
+     title="Reading Materials" data-placement="bottom" tooltip
+     ng-href="{{ll.doc2}}">
+    <svg version="1.1" width="1rem" height="1rem" fill="currentcolor" stroke="currentcolor"
+         viewBox="0 0 406 406">
+      <path d="M397.899,140.524c0-8.711-7.062-15.772-15.772-15.772h-4.41V31.544h4.41c8.71,0,15.772-7.062,15.772-15.772
+			C397.899,7.061,390.837,0,382.127,0H110.333C82.84,0,60.475,22.367,60.475,49.86v56.576c0,6.466,1.25,12.641,3.5,18.316H23.671
+			c-8.71,0-15.772,7.061-15.772,15.772s7.063,15.772,15.772,15.772h4.412v93.208h-4.412c-8.71,0-15.772,7.062-15.772,15.771
+			s7.063,15.771,15.772,15.771h40.302c-2.25,5.675-3.5,11.852-3.5,18.315v56.575c0,27.494,22.366,49.861,49.858,49.861h271.793
+			c8.712,0,15.772-7.062,15.772-15.772c0-8.709-7.063-15.771-15.772-15.771h-4.41v-93.208h4.41c8.712,0,15.772-7.062,15.772-15.771
+			s-7.063-15.771-15.772-15.771h-40.302c2.25-5.674,3.5-11.85,3.5-18.316v-56.576c0-6.466-1.25-12.642-3.5-18.316h40.302
+			C390.837,156.296,397.899,149.235,397.899,140.524z M59.628,249.504v-30.832h101.801c8.71,0,15.772-7.061,15.772-15.772
+			c0-8.711-7.062-15.772-15.772-15.772H59.628v-30.832h50.704h185.135c10.098,0,18.313,8.217,18.313,18.316v56.576
+			c0,10.101-8.218,18.316-18.313,18.316H59.628z M346.171,281.048v30.832H244.368c-8.709,0-15.771,7.062-15.771,15.772
+			s7.062,15.771,15.771,15.771h101.805v30.832h-235.84c-10.099,0-18.315-8.217-18.315-18.315v-56.576
+			c0-10.099,8.217-18.315,18.315-18.315H346.171L346.171,281.048z M346.171,62.376H244.368c-8.709,0-15.771,7.062-15.771,15.772
+			s7.062,15.772,15.771,15.772h101.805v30.832h-235.84c-10.099,0-18.315-8.217-18.315-18.316V49.86
+			c0-10.099,8.217-18.316,18.315-18.316h235.839L346.171,62.376L346.171,62.376z"></path>
     </svg>
   </a>
   <a class="btn btn-light" target="_blank" ng-if="ll.learn"
