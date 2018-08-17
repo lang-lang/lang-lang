@@ -103,6 +103,14 @@
       "spec"  : "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
     },
     {
+      "lang"  : "Julia",
+      "logo"  : "https://upload.wikimedia.org/wikipedia/commons/6/69/Julia_prog_language.svg",
+      "desc"  : "high-level general-purpose, dynamic, optionally typed, science focused",
+      "home"  : "https://julialang.org/",
+      "docs"  : "https://docs.julialang.org/en/stable/",
+      "learn"  : "https://julialang.org/learning/"
+    },
+    {
       "lang"  : "Kotlin",
       "logoSm": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
       "desc"  : "static type, object oriented, structured; JVM, LLVM",
